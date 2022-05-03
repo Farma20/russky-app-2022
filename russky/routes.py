@@ -1,6 +1,6 @@
 import logging
 import uuid
-
+ывывыфвфвфвфыв
 from fastapi import Request
 from fastapi.responses import HTMLResponse
 from multiavatar.multiavatar import multiavatar
@@ -13,7 +13,7 @@ from russky.models import RecommendationResponse
 
 logger = logging.getLogger(__name__)
 
-
+фывфывфывфывфывфы
 @app.get('/', response_class=HTMLResponse)
 @app.get('/recommend', response_class=HTMLResponse)
 async def random(request: Request) -> _TemplateResponse:
@@ -37,8 +37,8 @@ async def random_by_type(request: Request, recommendation_type: str) -> _Templat
 async def api_random() -> RecommendationResponse:
     return RecommendationResponse(recommendation=DI.data_sources.get_random_recommendation())
 
-
-@app.get('/avatar')
+фывыфвфывфвфы
+@app.get('/avыфвфыывфывatar')
 def avatar() -> Response:
     image: bytes = multiavatar(uuid.uuid4().hex, True, None).encode()
     # media_type here sets the media type of the actual response sent to the client.
