@@ -13,6 +13,7 @@ from russky.models import RecommendationResponse
 
 logger = logging.getLogger(__name__)
 
+
 @app.get('/', response_class=HTMLResponse)
 @app.get('/recommend', response_class=HTMLResponse)
 async def random(request: Request) -> _TemplateResponse:
